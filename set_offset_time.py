@@ -29,7 +29,10 @@ def process_file(file, offset_value, overall_task, progress):
     """Process an individual file, updating the progress bar."""
     try:
         file_path = os.path.join(os.getcwd(), file)
+        
+        # The actual cmd for ExifTool: 
         command = [exiftool_path, '-overwrite_original_in_place', '-preserve', '-offsettime*=' + offset_value, file_path]
+        
         subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         progress.advance(overall_task)
         progress.description = f"[cyan]Processing...[/]"
