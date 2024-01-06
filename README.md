@@ -16,3 +16,5 @@ Put all your processed jpgs into a folder, then run this script from within that
 `python set_offset_time.py -05:00`
 
 The time from GMT needs to be formatted as shown with either +/-00:00.
+
+![screenshot](set_offset_time.png)
